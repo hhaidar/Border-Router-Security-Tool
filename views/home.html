@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title><?php $this->put('site_name'); ?></title>
+	<?php foreach($this->get('css') as $file): ?>
+		<link rel="stylesheet" type="text/css" href="<?php $this->put('media_url'); ?>/css/<?php $this->e($file); ?>" />
+	<?php endforeach; ?>
+	<?php foreach($this->get('javascript') as $file): ?>
+		<script src="<?php $this->put('media_url'); ?>/js/<?php $this->e($file); ?>" type="text/javascript"></script>
+	<?php endforeach; ?>
+</head>
+
+<body>
+	
+</body>
+
+</html>
