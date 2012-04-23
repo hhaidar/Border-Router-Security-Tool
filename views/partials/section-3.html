@@ -1,0 +1,151 @@
+<h1><a name="Section3">Section 3</a>: Access Control</h1>
+
+
+
+		<p>Access to the router via both physical ports such as Auxilliary (aux) and Console ports,
+
+		and access to virtual terminal (vty) ports must be controlled.  The information you provide
+
+		in this section will permit secure access but deny unauthorized login attempts.</p>
+
+
+
+		<h2><a name="Section3a">Section 3a</a>: Enable Secret and Local User Account</h2>
+
+
+
+		<p>Enter the Enable Secret Password.</p>
+
+
+
+		Enable Secret Password:  &nbsp&nbsp<input type="text" name="enable_secret_pw" size="25" maxlength="25"/>
+
+
+
+		<p>Enter a username and password for a local user account. </p>
+
+
+
+		<table>
+
+			<tr>
+
+				<td>
+
+				Username:  &nbsp&nbsp<input type="text" name="username" size="25" maxlength="25"/>&nbsp &nbsp
+
+				</td>
+
+				<td>
+
+				Password:  &nbsp&nbsp<input type="text" name="u_password" size="25" maxlength="25"/>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+
+
+		<h2><a name="Section3b">Section 3b</a>: Auxilliary Port</h2>
+
+
+
+		<p>The auxilliary port or aux port is not normally needed and should be disabled unless it is
+
+		attached to a modem for out of band access.  Not all routers have aux ports.  <b>If your router
+
+		has an aux port, be sure to check the "Disable aux port" box if it is not used for out of band
+
+		access via a modem.</b></p>
+
+
+
+		<p><label><input name="checkbox_aux" type="checkbox" value="checked" />
+
+		Disable <a href="help.html#aux" target="_blank">aux port</a>.</label></p>
+
+
+
+		<h2><a name="Section3c">Section 3c</a>: Console Port</h2>
+
+
+
+		<p>The console port is used to access the router locally using a serial connection and terminal
+
+		emulation software like Putty, TeraTerm, or HyperTerm.</p>
+
+
+
+		<p><label><input name="checkbox_console" type="checkbox" value="checked" checked />
+
+		Configure <a href="help.html#console" target="_blank">console port</a>.</label></p>
+
+
+
+		<h2><a name="Section3d">Section 3d</a>: Virtual Terminal (vty) Ports</h2>
+
+
+
+		<p>Virtual Terminal (vty) ports control remote access via the network.  Since vty ports are
+
+		accesible over the network, they represent a great risk if they are not secured properly.
+
+		Vty ports should only be accessible from trusted IP addresses, and only protocols that
+
+		provide encryption like Secure Shell (SSH) should be permitted.  Enter the IP address of
+
+		a trusted host.  If you will always be accessing the router from the LAN behind a firewall,
+
+		you can use the firewall's IP address which is nearest the router.  </p>
+
+
+
+			<p>Enter the IP Address of a trusted remote access computer or the Firewall's outside interface.  </p>
+
+
+
+		    <input type="text" name="vty_trusted_ip1" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="vty_trusted_ip2" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="vty_trusted_ip3" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="vty_trusted_ip4" size="3" maxlength="3"><br />
+
+
+
+		<p><label><input name="checkbox_vty" type="checkbox" value="checked" checked />
+
+		Secure <a href="help.html#vty" target="_blank">vty ports</a>.</label></p>
+
+
+
+		<h2><a name="Section3e">Section 3e</a>:  Restricting Command Access</h2>
+
+
+
+		<p>Some commands that are available to all user levels should be restricted to administrator
+
+		level.</p>
+
+
+
+		<p><label><input name="checkbox_cmd_access" type="checkbox" value="checked" checked />
+
+		Restrict Access to <a href="help.html#cmd_access" target="_blank">High Risk Commands</a>.</label></p>
+
+
+
+		<h2><a name="Section3f">Section 3f</a>:  AAA Access Control </h2>
+
+
+
+		<p>AAA Access Control permits additional logging of actions taken by users.</p>
+
+
+
+		<p><label><input name="checkbox_aaa" type="checkbox" value="checked" checked />
+
+		Configure <a href="help.html#cmd_aaa" target="_blank">Local AAA</a>.</label></p>

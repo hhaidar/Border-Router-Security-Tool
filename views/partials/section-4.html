@@ -1,0 +1,83 @@
+<h1><a name="Section4">Section 4</a>: Anti-spoofing</h1>
+
+
+
+		<p>Controlling the flow of erroneous or mischevious traffic to or through the router is done with
+
+		null routing and access control lists.</p>
+
+
+
+		<h2><a name="Section4a">Section 4a</a>: Null Routing</h2>
+
+
+
+		<p>The crst uses null routing to dispose of bogon and martian packets that try to traverse or enter
+
+		the router because it is an effective and efficient way to do so.  Null routing quietly drops packets
+
+		that are within static routes assigned to the null interface using minimal processing power to discard
+
+		these known bad packets.</p>
+
+
+
+		<p>Configuring null routing is recomended with a caveat.  If you configure null routing, it is
+
+		strongly recommended that you check the null route provided against the current list maintained
+
+		at <a href="http://www.cymru.com/Documents/secure-ios-template.html" target="_blank">team cymru's web site</a>.
+
+		You are also encouraged to sign up for their
+
+		<a href="http://puck.nether.net/mailman/listinfo/bogon-announce" target="_blank">mailing list</a>
+
+		and to update your null routes when changes are announced.  Changes do not occur often.  The
+
+		bogon addresses used to generate this null route are from 5 October, 2008.  There had not been
+
+		a change to the list since May of 2008.
+
+		</p>
+
+
+
+		<p><label><input name="checkbox_null_route" type="checkbox" value="checked" checked />
+
+		Configure <a href="help.html#null_route" target="_blank">null routing</a>.</label></p>
+
+
+
+		<h2><a name="Section4b">Section 4b</a>: Internet (Outside) Access Control List (ACL)</h2>
+
+
+
+		<p>The firewall facing interface should only receive traffic from the firewall.  This access list
+
+		will permit traffic with an originating address of the firewall but will deny and log all other
+
+		traffic.</p>
+
+
+
+		<p><label><input name="checkbox_outside_acl" type="checkbox" value="checked" checked />
+
+		Create <a href="help.html#outside_acl" target="_blank">Outside ACL</a>.</label></p>
+
+
+
+		<h2><a name="Section4c">Section 4c</a>: Firewall Facing (Inside) ACL</h2>
+
+
+
+		<p>The firewall facing interface should only receive traffic from the firewall.  This access list
+
+		will permit traffic with an originating address of the firewall but will deny and log all other
+
+		traffic.</p>
+
+
+
+		<p><label><input name="checkbox_inside_acl" type="checkbox" value="checked" checked />
+
+		Create <a href="help.html#inside_acl" target="_blank">Inside ACL</a>.</label></p>

@@ -20,6 +20,7 @@ respond(function($request, $response, $app) {
 		'javascript' => array(
 			'jquery.js',
 			'bootstrap.js',
+			'carousel.js',
 			'common.js'
 		)
 	));

@@ -1,0 +1,63 @@
+<h2>Preparation</h2>
+<p>
+	<b>These are actions you should take prior to completing the questionnaire. Router commands to complete these steps are available <a href="crypto_key.html"
+	   target="_blank">here</a>.</b>
+</p>
+<ol>
+	<li>
+		<p>
+			Enter a router host name.
+		</p>
+	</li>
+	<li>
+		<p>
+			Enter the domain-name. (This step facilitates generation of an RSA Key in the next step.)
+		</p>
+	</li>
+	<li>
+		<p>
+			Generate an RSA Cryptography Key (crypto-key) to allow configuration of Secure Shell (SSH). For specific commands that will create a host name, a domain name and will allow you to generate an RSA crypto-key, click <a href="crypto_key.html"
+			   target="_blank">here</a>.
+		</p>
+	</li>
+	<li>
+		<p>
+			<b>Does your Internet Operating System (IOS) version support cryptography?</b> (If you were able to generate a crypto-key using the previous step, the answer is yes. If not, then click no)
+		</p>
+		<table>
+			<tr>
+				<td>
+					<label><input name="radio_encryption"
+						   type="radio"
+						   value="yes"
+						   checked="checked" />Yes</label>
+				</td>
+				<td>
+					<label><input name="radio_encryption"
+						   type="radio"
+						   value="no" />No</label>
+				</td>
+			</tr>
+		</table>
+	</li>
+</ol>
+<p>
+	Enter the code version running on your router. Do not include trailing letters. Code version (example 12.0(3)): <input type="text"
+	   name="ver_major_release"
+	   size="2"
+	   maxlength="2" /> <b>.</b><input type="text"
+	   name="ver_maint_release"
+	   size="2"
+	   maxlength="2" /> <b>(</b><input type="text"
+	   name="ver_maint_revision"
+	   size="2"
+	   maxlength="2 /" /><b>)</b><br />
+	(The code version can be obtained by typing the "show version" command at the enable prompt.)
+</p>
+<p>
+	Enter the model of your router. Model (example model 1602)): <input type="text"
+	   name="hardware_version"
+	   size="25"
+	   maxlength="25" /><br />
+	(The router model can be obtained by typing the "show version" command at the enable prompt. Only numbers should be entered.)
+</p>

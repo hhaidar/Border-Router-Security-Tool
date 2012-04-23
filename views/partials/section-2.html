@@ -1,0 +1,263 @@
+<h1><a name="Section2">Section 2</a>:  Recommended Services</h1>
+
+
+
+		<p>Some global and interface services that can increase router security are not enabled by default.
+
+		You will enable those services here.</p>
+
+
+
+		<h2><a name="Section2a">Section 2a:  Recommended Global Services</h2>
+
+
+
+		<p><b>Please review each setting below and uncheck services you want left as they are.</b></p>
+
+
+
+		<table>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_cef" type="checkbox" value="checked" checked />
+
+		  Enable <a href="help.html#cef" target="_blank">CEF</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_tcp_keepalives_in" type="checkbox" value="checked" checked />
+
+		  Enable <a href="help.html#tcp_keepalives_in" target="_blank">TCP Keepalives In</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_tcp_keepalives_out" type="checkbox" value="checked" checked />
+
+		  Enable <a href="help.html#tcp_keepalives_out" target="_blank">TCP Keepalives Out</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_pw_encryption" type="checkbox" value="checked" checked />
+
+		  Enable <a href="help.html#pw_encryption" target="_blank">Password Encryption</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name"checkbox_ssh_time_out" type="checkbox" value="checked" checked />
+
+		  Configure <a href="help.html#ssh_time_out" target="blank">SSH Time-out</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_ssh_auth_retries" type="checkbox" value="checked" checked />
+
+		  Limit <a href="help.html#ssh_auth_retries" target="_blank">SSH Authentication retries to 3 </a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name"checkbox_subnet_zero" type="checkbox" value="checked" checked />
+
+		  Configure <a href="help.html#subnet_zero" target="blank">IP Subnet-zero</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_ip_classless" type="checkbox" value="checked" checked />
+
+		  Configure <a href="help.html#ip_classless" target="_blank">IP Classless </a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><strong><input type="checkbox" name="checkall" onclick="checkUncheckAll2a(this);" checked/>
+
+		  Select/Unselect All</strong></label></td>
+
+
+
+		  <td>&nbsp</td>
+
+		  </tr>
+
+
+
+		</table>
+
+
+
+		<h2><a name="Section2c">Section 2c</a>: Loopback Interface</h2>
+
+
+
+		<p><label><input name="checkbox_loopback" type="checkbox" value="checked" checked />
+
+		Create a <a href="help.html#loopback" target="_blank">Loopback Interface</a> which will have
+
+		protocols such as ntp bound to it.</label></p>
+
+
+
+		<p>Enter the IP Address you want to use for your loopback interface.
+
+		This should be an address from a network range that is not in use on any other interface on
+
+		your router.  </p>
+
+
+
+		  <input type="text" name="loopback_ip1" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="loopback_ip2" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="loopback_ip3" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="loopback_ip4" size="3" maxlength="3">
+
+
+
+
+
+		<p>(All services disabled on the previous interfaces will also be disabled here with the
+
+		exception of Network Time Protocol (ntp).  <b>Ntp will remain enabled on this interface</b>.)</p>
+
+
+
+		<h2><a name="Section2d">Section 2d</a>: Null Interface</h2>
+
+
+
+		<p><label><input name="checkbox_null" type="checkbox" value="checked" checked />
+
+		Create a <a href="help.html#null" target="_blank">Null Interface</a></label> that will be used for null
+
+		routing.</p>
+
+
+
+		<p>(The only service that can be disabled on a null interface is ip unreachables.
+
+		Ip unreachables will be disabled on the null interface).</p>
+
+
+
+		<h2><a name="Section2e">Section 2e</a>: Configure Network Time Protocol</h2>
+
+
+
+		<p>Correct time on the router is critical for tracking network attacks.  Logfiles from several
+
+		devices may have to be parsed to find "threads" of activity through the network.  Accurate
+
+		timestamps on log entries permits those logs to be searched for entries at specific times.
+
+		Network Time Protocol servers provide nearly synchronous time across a network.</p>
+
+
+
+		<p>Ntp was disabled on several interfaces.  Ntp information should not be given to unauthorized
+
+		queries, and the router should not be an ntp server unless it is part of a larger ntp
+
+		infrastructure.  Ntp will be enabled on and bound to the loopback interface.</p>
+
+
+
+		<p>To find a public ntp server near you, go to ntp.org's <a href="http://support.ntp.org/bin/view/Servers/StratumTwoTimeServers" target="_blank">
+
+		Stratum 2 Time Servers</a>.  Scroll down the list to find a pair of servers that have an Open
+
+		Access Policy, and preferably ones that do not require Notification.  They are listed by name which would
+
+		require our router to be able to resolve the names to use the ntp servers.  The Domain Name System (DNS)
+
+		poses its own risks so we disabled it earlier.  Resolve the name to an IP address by pinging it on a PC or
+
+		Unix computer.  Be aware that the IP addresses associated with host names are subject to change, so you must
+
+		check that ntp is working periodically and it is best to configure at least two servers.</p>
+
+
+
+		<p>Be sure to look at ntp.org's <a href="http://support.ntp.org/bin/view/Servers/RulesOfEngagement" target="_blank">Rules of Engagement</a>
+
+		concerning the use of Stratum 2 Servers.</p>
+
+
+
+
+
+		<p><label><input name="checkbox_ntp_config" type="checkbox" value="checked" checked />
+
+		Configure <a href="help.html#ntp_config" target="_blank">Network Time Protocol on Loopback Interface</a>.</label></p>
+
+
+
+		<table>
+
+		<tr>
+
+			<td>
+
+			Enter the IP Address of the Primary NTP Server:
+
+			</td>
+
+
+
+			<td>
+
+		    <input type="text" name="ntp_svr1_ip1" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="ntp_svr1_ip2" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="ntp_svr1_ip3" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="ntp_svr1_ip4" size="3" maxlength="3">
+
+			</td>
+
+
+
+		</tr>
+
+		<tr>
+
+			<td>
+
+			Enter the IP Address of the Secondary NTP Server:
+
+			</td>
+
+			<td>
+
+		    <input type="text" name="ntp_svr2_ip1" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="ntp_svr2_ip2" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="ntp_svr2_ip3" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="ntp_svr2_ip4" size="3" maxlength="3">
+
+			</td>
+
+		</tr>
+
+		</table>

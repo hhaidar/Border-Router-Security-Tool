@@ -1,0 +1,223 @@
+<h1><a name="Section5">Section 5</a>: Logging</h1>
+
+
+
+		<p>There are many options with regard to what to log and how to store log entries.  Attackers may try
+
+		to cover their tracks by overwriting or erasing log files.  It is important to forward log entries to
+
+		a secured syslog server that is external to the router if possible.  This will ensure that logs are
+
+		preserved even if the router is power cycled.  It should also make it more difficult for an attacker
+
+		to modify or erase the log files.</p>
+
+
+
+		<p>A relatively safe way to set up a syslog server is to use a spare Ethernet or Fast Ethernet interface
+
+		on the router to set up a kind of Demilitarized Zone (DMZ) strictly for the Syslog Server.  You could use
+
+		an old computer you have and install a donation supported operating system like
+
+		<a href="http://www.openbsd.org/" target="_blank">OpenBSD</a>,
+
+		<a href="http://www.centos.org/" target="_blank">CentOS</a>,
+
+		<a href="http://www.freebsd.org/" target="_blank">FreeBSD</a>, or
+
+		<a href="http://fedoraproject.org/" target="_blank">Fedora</a>.
+
+		Each of the operating systems referenced has its own firewall software available to screen traffic and has
+
+		a built in syslog service.  Packets traversing the router's DMZ interface can be restricted so only syslog
+
+		messages from the loopback interface of the router, and possibly SSH traffic to and from the firewall
+
+		facing interface are allowed.  </p>
+
+
+
+		<p>If there aren't any spare interfaces on your router, you could put a syslog server in the Firewall's DMZ
+
+		and only permit traffic to it from the router's loopback IP address.  </p>
+
+
+
+		<p>If neither of those options are available, it may be preferable to configure local logging only instead of
+
+		permitting syslog messages to penetrate the Firewall to a syslog server on the Local Area Network.  </p>
+
+
+
+		  <label><input name="radio_logging" type="radio" value="local_syslog" /> Configure
+
+		  <a href="help.html#syslog_local" target="_blank">Syslog using local port</a></label><br />
+
+
+
+		   &nbsp<br />
+
+
+
+		   Enter an IP address, netmask, and interface name for the DMZ interface and the IP address of the Syslog
+
+		   Server:  <br />
+
+
+
+		   &nbsp<br />
+
+
+
+		   <table>
+
+		   <tr>
+
+
+
+		   <td>Local DMZ Interface IP:</td>
+
+
+
+		   <td>
+
+		    <input type="text" name="local_dmz_ip1" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="local_dmz_ip2" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="local_dmz_ip3" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="local_dmz_ip4" size="3" maxlength="3">
+
+		   </td>
+
+
+
+		   <td>Local DMZ Interface Mask:</td>
+
+
+
+		   <td>
+
+		    <input type="text" name="local_dmz_mask1" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="local_dmz_mask2" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="local_dmz_mask3" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="local_dmz_mask4" size="3" maxlength="3">
+
+
+
+		   </td>
+
+
+
+		   </tr>
+
+
+
+		   <tr>
+
+
+
+		   <td>Local DMZ Syslog Server IP:</td>
+
+
+
+		   <td>
+
+		    <input type="text" name="local_dmz_syslog_ip1" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="local_dmz_syslog_ip2" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="local_dmz_syslog_ip3" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="local_dmz_syslog_ip4" size="3" maxlength="3">
+
+		   </td>
+
+
+
+		   <td>Local DMZ Interface Name:</td>
+
+
+
+		   <td>
+
+		   <input type="text" name="local_dmz_name" size="25" maxlength="25"/>
+
+		   </td>
+
+
+
+		   </tr>
+
+
+
+		   </table>
+
+
+
+		  &nbsp<br />
+
+
+
+		  <label><input name="radio_logging" type="radio" value="dmz_syslog" /> Configure <a href="help.html#syslog_fw_dmz" target="_blank">Syslog using DMZ on Firewall</a></label><br />
+
+
+
+		   &nbsp<br />
+
+
+
+		   Enter the IP address of the Syslog Server:  <br />
+
+
+
+		   &nbsp<br />
+
+
+
+		   <table>
+
+		   <tr>
+
+
+
+		   <td>Firewall DMZ Syslog Server IP address:</td>
+
+
+
+		   <td>
+
+		    <input type="text" name="firewall_syslog_ip1" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="firewall_syslog_ip2" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="firewall_syslog_ip3" size="3" maxlength="3">&nbsp<b>.</b>
+
+			<input type="text" name="firewall_syslog_ip4" size="3" maxlength="3">
+
+		   </td>
+
+
+
+		   </tr>
+
+
+
+		   </table>
+
+
+
+		  &nbsp<br />
+
+
+
+		  <label><input name="radio_logging" type="radio" value="local_logging" checked="checked" /> Configure <a href="help.html#local_logging" target="_blank">Local logging only</a></label>
+
+		  <br />
+
+		</p>

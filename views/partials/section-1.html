@@ -1,0 +1,503 @@
+<h1><a name="Section1">Section 1</a>: Unneeded Services</h1>
+
+
+
+		<p>Many unneeded services are enabled by default.  This section guides you through
+
+		disabling Global (Section 1a), then interface specific (Section 1b) services that
+
+		are not needed.</p>
+
+
+
+		<h2><a name="Section1a">Section 1a</a>: Unneeded Global Services</h2>
+
+
+
+		<p>Disabling of global unneeded services affects the entire router and is done at
+
+		the enable prompt.</p>
+
+
+
+		<p><b>Please review each setting below and uncheck services you want left as they are.</b></p>
+
+
+
+		<p>For an <a href="help.html#index" target="_blank">index</a> of protocols that will be disabled
+
+		and a help file describing the services, their dangers, and recommended settings, click
+
+		<a href="help.html#index" target="_blank">here</a>.</p>
+
+
+
+		<table>
+
+
+
+		  <tr>
+
+		  <td><label><strong><input type="checkbox" name="checkall" onclick="checkUncheckAll1a(this);" checked/>
+
+		  Select/Unselect All</strong></label><br /><b>(Select All recommended)</b></td>
+
+
+
+		  <td>&nbsp</td>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_boot" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#boot" target="_blank">network booting</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_cdp" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#cdp" target="_blank">CDP</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_svc" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#svc" target="_blank">config auto-load</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_dhcp" type="checkbox" value="checked" checked />
+
+		  Disable <a href=help.html#dhcp target="_blank">DHCP</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_pad" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#pad" target="_blank">pad</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_finger" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#finger" target="_blank">IP Finger</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_grat_arps" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#grat_arps" target="_blank">IP Gratuitous Arps</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_http" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#http" target="_blank">HTTP Server</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_http_sec" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#http_sec" target="_blank">HTTP Secure Server</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_name_srv" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#name_srv" target="_blank">IP Name Server</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_src_rt" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#src_rt" target="_blank">IP Source Route</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_lldp" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#lldp" target="_blank">LLDP</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_tcp_ss" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#tcp_ss" target="_blank">TCP Small-Servers</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_udp_ss" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#udp_ss" target="_blank">UDP Small-Servers</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_ip_options" type="checkbox" value="checked" checked />
+
+		  Drop <a href="help.html#ip_options" target="_blank">IP Options packets</a></label></td>
+
+
+
+		  <td>&nbsp</td>
+
+		  </tr>
+
+
+
+		  </tr>
+
+
+
+		</table>
+
+
+
+		<h2><a name="Section1b">Section 1b</a>: Unneeded Interface Specific Services</h2>
+
+
+
+		<p>Disabling of unneeded interface services affects the interface they are entered on
+
+		and is done at the configure interface prompt.</p>
+
+
+
+		<h3><a name="Section1b1">Section 1b1</a>: Internet interface services</h3>
+
+
+
+		<p>Enter the name of your Internet facing router interface (example: serial 0).
+
+		This is the interface that connects to your Internet Service Provider's equipment.</p>
+
+
+
+		  <label>
+
+		  <input type="text" name="wan_int" size="25" maxlength="25"/>
+
+		  </label>
+
+
+
+		<p>Enter the IP address and mask of your Internet facing router interface.  This is the interface
+
+		that connects the router to the Internet Service Provider's (ISP's) router.  </p>
+
+
+
+		  <table>
+
+		  <tr>
+
+		  <td>
+
+		  IP Address: &nbsp
+
+		  <input type="text" name="wan_int_ip1" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="wan_int_ip2" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="wan_int_ip3" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="wan_int_ip4" size="3" maxlength="3">&nbsp&nbsp
+
+		  </td>
+
+
+
+		  <td>
+
+		  Mask: &nbsp
+
+		  <input type="text" name="wan_int_mask1" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="wan_int_mask2" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="wan_int_mask3" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="wan_int_mask4" size="3" maxlength="3">
+
+		  </td>
+
+		  </tr>
+
+		  </table>
+
+
+
+		<p><b>Review each setting below and uncheck services you want left as they are.</b></p>
+
+
+
+
+
+		<table>
+
+
+
+		  <tr>
+
+		  <td><label><strong><input type="checkbox" name="checkall" onclick="checkUncheckAll1b1(this);" checked/>
+
+		  Select/Unselect All</strong></label><br /><b>(Select All recommended)</b></td>
+
+
+
+		  <td>&nbsp</td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_wan_cdp_ena" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#cdp_ena" target="_blank">cdp (interface)</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_wan_ip_bcast" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#ip_bcast" target="_blank">IP Directed Broadcast</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_wan_redirects" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#redirects" target="_blank">IP Redirect</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_wan_proxy_arp" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#proxy_arp" target="_blank">IP Proxy-arp</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_wan_mask_reply" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#mask_reply" target="_blank">IP Mask-reply</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_wan_unreachables" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#unreachables" target="_blank">IP Unreachables</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_wan_mop" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#mop" target="_blank">mop</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_wan_ntp" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#ntp" target="_blank">Network Time Protocol</a></label></td>
+
+		  </tr>
+
+
+
+		</table>
+
+
+
+		<h3><a name="Section1b2">Section 1b2</a>: Firewall facing interface services</h3>
+
+
+
+		<p>Enter the name of your Firewall facing router interface (example: ethernet 0).  <br />
+
+		This is the interface that connects the router to your firewall.  </p>
+
+
+
+		  <label>
+
+		  <input type="text" name="firewall_int" size="25" maxlength="25">
+
+		  </label>
+
+
+
+		<p>Enter the IP address and mask of your Firewall facing router interface.  This is the interface
+
+		that connects the router to your firewall.  <br />
+
+		&nbsp<br />
+
+
+
+		  <table>
+
+		  <tr>
+
+		  <td>
+
+		  IP Address: &nbsp
+
+		  <input type="text" name="firewall_int_ip1" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="firewall_int_ip2" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="firewall_int_ip3" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="firewall_int_ip4" size="3" maxlength="3">&nbsp&nbsp
+
+		  </td>
+
+
+
+		  <td>
+
+		  Mask: &nbsp
+
+		  <input type="text" name="firewall_int_mask1" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="firewall_int_mask2" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="firewall_int_mask3" size="3" maxlength="3">&nbsp<b>.</b>
+
+		  <input type="text" name="firewall_int_mask4" size="3" maxlength="3">
+
+		  </td>
+
+		  </tr>
+
+		  </table>
+
+
+
+		<p><b>Review each setting below and uncheck services you want left as they are.</b></p>
+
+
+
+		<table>
+
+
+
+		  <tr>
+
+		  <td><label><strong><input type="checkbox" name="checkall" onclick="checkUncheckAll1b2(this);" checked/>
+
+		  Select/Unselect All</strong></label><br /><b>(Select All recommended)</b></td>
+
+
+
+		  <td>&nbsp</td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_fw_cdp_ena" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#cdp_ena" target="_blank">cdp (interface)</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_fw_ip_bcast" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#ip_bcast" target="_blank">IP Directed Broadcast</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_fw_redirects" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#redirects" target="_blank">IP Redirect</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_fw_proxy_arp" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#proxy_arp" target="_blank">IP Proxy-arp</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_fw_mask_reply" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#mask_reply" target="_blank">IP Mask-reply</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_fw_unreachables" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#unreachables" target="_blank">IP Unreachables</a></label></td>
+
+		  </tr>
+
+
+
+		  <tr>
+
+		  <td><label><input name="checkbox_fw_mop" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#mop" target="_blank">mop</a></label></td>
+
+
+
+		  <td><label><input name="checkbox_fw_ntp" type="checkbox" value="checked" checked />
+
+		  Disable <a href="help.html#ntp" target="_blank">Network Time Protocol</a></label></td>
+
+		  </tr>
+
+
+
+		</table>

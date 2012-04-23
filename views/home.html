@@ -12,7 +12,69 @@
 </head>
 
 <body>
-	
+	<div id="global">
+		<header>
+			<h1 id="logo">
+				<img src="<?php $this->put('media_url'); ?>/img/logo.png" alt="Border Router Security Tool" />
+			</h1>
+		</header>
+		<article>
+			<div id="main-carousel">
+				<!-- Carousel items -->
+				<div class="slider">
+					<div class="item intro">
+						<?php $this->render('partials/about'); ?>
+					</div>
+					<div class="item">
+						<div class="inner">
+							<?php $this->render('partials/preparation'); ?>
+						</div>
+						<?php $this->render('partials/buttons-both'); ?>
+					</div>
+					<div class="item">
+						<div class="inner">
+							<?php $this->render('partials/ip'); ?>
+						</div>
+						<?php $this->render('partials/buttons-both'); ?>
+					</div>
+					<div class="item">
+						<div class="inner">
+							<?php $this->render('partials/section-1'); ?>
+						</div>
+						<?php $this->render('partials/buttons-both'); ?>
+					</div>
+					<div class="item">
+						<div class="inner">
+							<?php $this->render('partials/section-2'); ?>
+						</div>
+						<?php $this->render('partials/buttons-both'); ?>
+					</div>
+					<div class="item">
+						<div class="inner">
+							<?php $this->render('partials/section-3'); ?>
+						</div>
+						<?php $this->render('partials/buttons-both'); ?>
+					</div>
+					<div class="item">
+						<div class="inner">
+							<?php $this->render('partials/section-4'); ?>
+						</div>
+						<?php $this->render('partials/buttons-both'); ?>
+					</div>
+					<div class="item">
+						<div class="inner">
+							<?php $this->render('partials/section-5'); ?>
+						</div>
+						<?php $this->render('partials/buttons-final'); ?>
+					</div>
+				</div>
+			</div>
+		</article>
+		<footer>
+			
+		</footer>
+		<a href="http://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/camo.github.com/4c7dc970b89fd04b81c8e221ba88ff99a06c6b61/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub"></a>
+	</div>
 </body>
 
 </html>
